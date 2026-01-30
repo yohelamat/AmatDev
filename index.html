@@ -10,15 +10,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
-        /* FORZAR MODO OSCURO PROPIO (Ignora el del sistema para evitar errores) */
+        /* --- ESTILOS GENERALES (Misma base V4) --- */
         :root {
             color-scheme: dark; 
             --bg-dark: #0f1115;       
             --bg-card: #161b22;       
             --accent: #3b82f6;        
             --accent-glow: #60a5fa;   
-            --text-main: #f8fafc;     /* Blanco puro para lectura */
-            --text-muted: #cbd5e1;    /* Gris muy claro para subtítulos */
+            --text-main: #f8fafc;     
+            --text-muted: #cbd5e1;    
         }
 
         body {
@@ -28,57 +28,35 @@
             overflow-x: hidden;
         }
 
-        /* --- NAVBAR --- */
+        /* Navbar & Botones */
         .navbar {
             background-color: rgba(15, 17, 21, 0.95) !important;
             backdrop-filter: blur(10px);
             border-bottom: 1px solid rgba(255,255,255,0.1);
             padding: 1rem 0;
         }
+        .navbar-brand { font-weight: 700; letter-spacing: -0.5px; font-size: 1.5rem; color: white !important; }
         
-        .navbar-brand {
-            font-weight: 700;
-            letter-spacing: -0.5px;
-            font-size: 1.5rem;
-            color: white !important;
-        }
-
         .btn-access {
             background: rgba(59, 130, 246, 0.1);
             color: var(--accent-glow);
-            border: 1px solid rgba(59, 130, 246, 0.5); /* Borde más visible */
+            border: 1px solid rgba(59, 130, 246, 0.5);
             transition: all 0.3s;
         }
+        .btn-access:hover { background: var(--accent); color: white; box-shadow: 0 0 15px rgba(59, 130, 246, 0.6); }
 
-        .btn-access:hover {
-            background: var(--accent);
-            color: white;
-            box-shadow: 0 0 15px rgba(59, 130, 246, 0.6);
-        }
-
-        /* --- HERO SECTION --- */
+        /* Hero */
         .hero-section {
             padding: 140px 0 100px;
             background: radial-gradient(circle at 50% 0%, #1e293b 0%, var(--bg-dark) 70%);
         }
-
         .hero-badge {
-            background: rgba(59, 130, 246, 0.15);
-            color: #93c5fd; /* Azul más claro para leer mejor */
-            border: 1px solid rgba(59, 130, 246, 0.3);
-            font-size: 0.9rem;
-            letter-spacing: 1px;
+            background: rgba(59, 130, 246, 0.15); color: #93c5fd; border: 1px solid rgba(59, 130, 246, 0.3);
+            font-size: 0.9rem; letter-spacing: 1px;
         }
+        .display-title { font-size: 3.5rem; font-weight: 800; line-height: 1.1; color: white; text-shadow: 0 0 30px rgba(59, 130, 246, 0.2); }
 
-        .display-title {
-            font-size: 3.5rem;
-            font-weight: 800;
-            line-height: 1.1;
-            color: white; /* Forzamos blanco */
-            text-shadow: 0 0 30px rgba(59, 130, 246, 0.2);
-        }
-
-        /* --- TARJETAS --- */
+        /* Tarjetas */
         .feature-card {
             background-color: var(--bg-card);
             border: 1px solid rgba(255,255,255,0.1);
@@ -87,59 +65,41 @@
             height: 100%;
             transition: transform 0.3s, border-color 0.3s;
         }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent);
-            background-color: #1a202c;
-        }
-
+        .feature-card:hover { transform: translateY(-5px); border-color: var(--accent); background-color: #1a202c; }
         .icon-square {
-            width: 60px;
-            height: 60px;
-            background: rgba(59, 130, 246, 0.1);
-            color: var(--accent);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 12px;
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
+            width: 60px; height: 60px; background: rgba(59, 130, 246, 0.1); color: var(--accent);
+            display: flex; align-items: center; justify-content: center; border-radius: 12px; font-size: 1.5rem; margin-bottom: 1.5rem;
         }
 
-        /* --- NUEVA SECCIÓN MISIÓN / VISIÓN (Estilo Glass) --- */
-        .mv-section {
-            background: linear-gradient(180deg, var(--bg-dark) 0%, #0b0d10 100%);
+        /* --- NUEVO: SOBRE NOSOTROS --- */
+        .about-img-container {
             position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.1);
         }
-        
-        .mv-card {
-            background: rgba(255, 255, 255, 0.03);
-            border-left: 4px solid var(--accent);
-            padding: 2rem;
-            border-radius: 0 12px 12px 0;
-        }
-
-        .mv-title {
-            color: white;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        .stat-box {
+            background: rgba(15, 17, 21, 0.9);
+            border: 1px solid var(--accent);
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
         }
 
-        /* --- FOOTER --- */
-        footer {
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding: 4rem 0 2rem;
-            background: #050505;
+        /* --- NUEVO: CONTACTO --- */
+        .contact-box {
+            background-color: var(--bg-card);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: 0.3s;
         }
-        
-        /* Asegurar que el texto muted se lea */
-        .text-muted {
-            color: #cbd5e1 !important;
-        }
+        .contact-box:hover { border-color: var(--accent); }
+
+        /* Filosofía (Misión/Visión) */
+        .mv-section { background: linear-gradient(180deg, var(--bg-dark) 0%, #0b0d10 100%); }
+        .mv-card { background: rgba(255, 255, 255, 0.03); border-left: 4px solid var(--accent); padding: 2rem; border-radius: 0 12px 12px 0; }
+        .text-muted { color: #cbd5e1 !important; }
     </style>
 </head>
 <body>
@@ -149,15 +109,14 @@
             <a class="navbar-brand" href="#">
                 <i class="fa-solid fa-layer-group text-primary me-2"></i>AMAT DEV
             </a>
-            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link text-white mx-2" href="#filosofia">Filosofía</a></li>
+                    <li class="nav-item"><a class="nav-link text-white mx-2" href="#nosotros">Quiénes Somos</a></li>
                     <li class="nav-item"><a class="nav-link text-white mx-2" href="#soluciones">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link text-white mx-2" href="#contacto">Contacto</a></li>
                     <li class="nav-item ms-lg-4">
                         <a href="https://app.desarrollosamat.com" class="btn btn-access rounded-pill px-4 py-2 fw-bold">
                             <i class="fa-solid fa-lock me-2"></i>Portal Clientes
@@ -172,67 +131,102 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-9">
-                    <span class="badge hero-badge rounded-pill px-3 py-2 mb-4 text-uppercase fw-bold">
-                        Software Innovation • Panamá 🇵🇦
-                    </span>
-                    <h1 class="display-title mb-4">
-                        Construimos el Software <br> que tu Negocio Necesita.
-                    </h1>
+                    <span class="badge hero-badge rounded-pill px-3 py-2 mb-4 text-uppercase fw-bold">Software Innovation • Panamá 🇵🇦</span>
+                    <h1 class="display-title mb-4">Construimos el Software <br> que tu Negocio Necesita.</h1>
                     <p class="lead text-muted mb-5 mx-auto" style="max-width: 700px;">
-                        Desde plataformas SaaS especializadas hasta arquitecturas cloud a medida. 
-                        Ayudamos a empresas visionarias a escalar mediante tecnología sólida.
+                        Ayudamos a empresas visionarias a escalar mediante tecnología sólida, segura y a la medida.
                     </p>
                     <div class="d-flex justify-content-center gap-3">
-                        <a href="#contacto" class="btn btn-primary btn-lg px-5 rounded-pill fw-bold">Agendar Consultoría</a>
-                        <a href="#soluciones" class="btn btn-outline-light btn-lg px-5 rounded-pill">Ver Servicios</a>
+                        <a href="#contacto" class="btn btn-primary btn-lg px-5 rounded-pill fw-bold">Cotizar Proyecto</a>
+                        <a href="#nosotros" class="btn btn-outline-light btn-lg px-5 rounded-pill">Conócenos</a>
                     </div>
                 </div>
             </div>
-            
             <div class="row mt-5 pt-5 opacity-75">
-                <p class="small text-uppercase text-muted mb-3 fw-bold">Tecnología de Punta</p>
                 <div class="col-12 d-flex justify-content-center gap-5 fs-3 text-secondary flex-wrap">
-                    <i class="fa-brands fa-python text-white" title="Python"></i>
-                    <i class="fa-brands fa-aws text-white" title="Cloud"></i>
-                    <i class="fa-brands fa-docker text-white" title="Docker"></i>
-                    <i class="fa-solid fa-database text-white" title="PostgreSQL"></i>
-                    <i class="fa-brands fa-react text-white" title="React"></i>
+                    <i class="fa-brands fa-python text-white"></i>
+                    <i class="fa-brands fa-aws text-white"></i>
+                    <i class="fa-brands fa-docker text-white"></i>
+                    <i class="fa-solid fa-database text-white"></i>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="filosofia" class="py-5 mv-section">
+    <section id="nosotros" class="py-5" style="background-color: #0b0d10;">
         <div class="container py-5">
             <div class="row align-items-center">
-                <div class="col-lg-5 mb-5 mb-lg-0">
-                    <h2 class="display-6 fw-bold text-white mb-4">El Motor de Nuestra Innovación</h2>
-                    <p class="text-muted lead">
-                        En Amat Dev, no escribimos código por escribir. Creamos herramientas digitales con un propósito claro: **Resolver problemas reales de negocios reales.**
+                <div class="col-lg-6 pe-lg-5 mb-5 mb-lg-0">
+                    <h6 class="text-primary fw-bold text-uppercase mb-2">Sobre Amat Dev</h6>
+                    <h2 class="display-5 fw-bold text-white mb-4">Ingeniería Local,<br>Calidad Global.</h2>
+                    <p class="text-muted lead mb-4">
+                        Nacimos ante la necesidad del mercado panameño de contar con software que realmente se adapte a su forma de trabajar, y no al revés.
                     </p>
-                    <p class="text-muted">
-                        Creemos en la tecnología honesta, robusta y escalable. Sin complicaciones innecesarias.
+                    <p class="text-muted mb-4">
+                        En Amat Dev, combinamos la agilidad de un equipo moderno con la robustez técnica de las grandes consultoras. No somos solo programadores; somos socios estratégicos que entienden de flujos de caja, pacientes y clientes.
                     </p>
+                    
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-2 d-flex align-items-center"><i class="fa-solid fa-circle-check text-primary me-3"></i>Enfoque 100% en Seguridad de Datos.</li>
+                        <li class="mb-2 d-flex align-items-center"><i class="fa-solid fa-circle-check text-primary me-3"></i>Soporte Local y Directo.</li>
+                        <li class="d-flex align-items-center"><i class="fa-solid fa-circle-check text-primary me-3"></i>Arquitectura Escalable (Cloud).</li>
+                    </ul>
                 </div>
-                
-                <div class="col-lg-6 offset-lg-1">
-                    <div class="mv-card mb-4">
-                        <div class="mv-title">
-                            <i class="fa-solid fa-rocket text-primary fa-lg"></i>
-                            <h4 class="mb-0">Nuestra Misión</h4>
+
+                <div class="col-lg-6">
+                    <div class="about-img-container p-4 bg-dark">
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="stat-box h-100">
+                                    <h2 class="fw-bold text-white">+1</h2>
+                                    <small class="text-muted">Años de Exp.</small>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="stat-box h-100">
+                                    <h2 class="fw-bold text-white">100%</h2>
+                                    <small class="text-muted">Compromiso</small>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="stat-box d-flex align-items-center justify-content-center gap-3 py-4">
+                                    <i class="fa-solid fa-handshake fa-2x text-primary"></i>
+                                    <div class="text-start">
+                                        <h5 class="fw-bold text-white mb-0">Atención Personalizada</h5>
+                                        <small class="text-muted">Trato directo con el desarrollador.</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 mv-section">
+        <div class="container py-5">
+            <div class="row">
+                <h2 class="fw-bold text-white">Nuestras Filosofías</h2>
+                <div class="col-lg-6 mb-4">
+                    <div class="mv-card h-100">
+                        <div class="d-flex align-items-center mb-3 gap-3">
+                            <i class="fa-solid fa-rocket text-primary fa-2x"></i>
+                            <h4 class="text-white fw-bold mb-0">Nuestra Misión</h4>
                         </div>
                         <p class="text-muted mb-0">
-                            Democratizar el acceso a software de alta calidad para clínicas y PYMES en Panamá. Proveemos soluciones que automatizan procesos, eliminan el papel y permiten a los dueños de negocio enfocarse en crecer.
+                            Democratizar el acceso a software de alta calidad para clínicas y PYMES en Panamá, proveyendo herramientas que automatizan procesos y maximizan ganancias.
                         </p>
                     </div>
-
-                    <div class="mv-card">
-                        <div class="mv-title">
-                            <i class="fa-solid fa-eye text-primary fa-lg"></i>
-                            <h4 class="mb-0">Nuestra Visión</h4>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="mv-card h-100">
+                        <div class="d-flex align-items-center mb-3 gap-3">
+                            <i class="fa-solid fa-eye text-primary fa-2x"></i>
+                            <h4 class="text-white fw-bold mb-0">Nuestra Visión</h4>
                         </div>
                         <p class="text-muted mb-0">
-                            Ser la consultora tecnológica de referencia en la región, reconocida por transformar la gestión operativa tradicional en ecosistemas digitales eficientes, seguros y modernos.
+                            Ser la consultora tecnológica referente en la región, reconocida por transformar la gestión operativa tradicional en ecosistemas digitales eficientes.
                         </p>
                     </div>
                 </div>
@@ -242,80 +236,80 @@
 
     <section id="soluciones" class="py-5">
         <div class="container py-5">
-            <div class="row mb-5 text-center">
-                <div class="col-12">
-                    <h2 class="fw-bold text-white mb-3">Nuestras Capacidades</h2>
-                    <p class="text-muted mx-auto" style="max-width: 600px;">
-                        Combinamos ingeniería sólida con diseño intuitivo.
-                    </p>
-                </div>
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-white">Nuestras Soluciones</h2>
+                <p class="text-muted">Tecnología adaptada a tu crecimiento.</p>
             </div>
-
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="feature-card">
-                        <div class="icon-square">
-                            <i class="fa-solid fa-code"></i>
-                        </div>
-                        <h4 class="text-white fw-bold mb-3">Desarrollo a Medida</h4>
-                        <p class="text-muted">
-                            Aplicaciones web diseñadas específicamente para tus procesos. Olvídate de adaptar tu empresa al software; nosotros adaptamos el software a ti.
-                        </p>
+                        <div class="icon-square"><i class="fa-solid fa-code"></i></div>
+                        <h4 class="text-white fw-bold mb-3">Desarrollo Web</h4>
+                        <p class="text-muted">Aplicaciones web a medida. Olvídate de adaptar tu empresa al software; nosotros adaptamos el software a ti.</p>
                     </div>
                 </div>
-
                 <div class="col-md-4">
                     <div class="feature-card" style="border-color: rgba(59, 130, 246, 0.4);">
-                        <div class="icon-square">
-                            <i class="fa-solid fa-heart-pulse"></i> 
-                        </div>
+                        <div class="icon-square"><i class="fa-solid fa-heart-pulse"></i></div>
                         <h4 class="text-white fw-bold mb-3">SaaS Médico</h4>
-                        <p class="text-muted">
-                            Especialistas en HealthTech. Sistemas de expedientes, agendas y facturación que cumplen con normativas y protegen los datos del paciente.
-                        </p>
+                        <p class="text-muted">Sistemas de expedientes, agendas y facturación que cumplen con normativas y protegen los datos.</p>
                     </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="icon-square"><i class="fa-solid fa-server"></i></div>
+                        <h4 class="text-white fw-bold mb-3">Infraestructura</h4>
+                        <p class="text-muted">Despliegue en servidores seguros (AWS/DigitalOcean). Tu sistema siempre en línea y rápido.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-5 bg-dark">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center mb-5">
+                    <h2 class="fw-bold text-white">Hablemos de tu Proyecto</h2>
+                    <p class="text-muted">¿Tienes una idea o necesitas modernizar tu clínica/negocio? Estamos listos.</p>
+                </div>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4">
+                    <a href="https://wa.me/50700000000" class="text-decoration-none"> <div class="contact-box text-center h-100">
+                            <i class="fa-brands fa-whatsapp fa-3x text-success mb-3"></i>
+                            <h5 class="text-white fw-bold">Chat Directo</h5>
+                            <p class="text-muted small">Respuesta rápida vía WhatsApp</p>
+                        </div>
+                    </a>
                 </div>
 
                 <div class="col-md-4">
-                    <div class="feature-card">
-                        <div class="icon-square">
-                            <i class="fa-solid fa-cloud-arrow-up"></i>
+                    <a href="mailto:hola@amatdev.com" class="text-decoration-none">
+                        <div class="contact-box text-center h-100">
+                            <i class="fa-regular fa-envelope fa-3x text-primary mb-3"></i>
+                            <h5 class="text-white fw-bold">Correo Electrónico</h5>
+                            <p class="text-muted small">hola@amatdev.com</p>
                         </div>
-                        <h4 class="text-white fw-bold mb-3">Infraestructura Cloud</h4>
-                        <p class="text-muted">
-                            Despliegue en servidores seguros (AWS/DigitalOcean). Nos encargamos de que tu sistema esté siempre en línea, rápido y con copias de seguridad.
-                        </p>
+                    </a>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="contact-box text-center h-100">
+                        <i class="fa-solid fa-location-dot fa-3x text-danger mb-3"></i>
+                        <h5 class="text-white fw-bold">Ubicación</h5>
+                        <p class="text-muted small">Panamá City, Panamá 🇵🇦</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contacto" class="py-5">
-        <div class="container py-5">
-            <div class="p-5 rounded-4 text-center" style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); border: 1px solid rgba(255,255,255,0.1);">
-                <h2 class="text-white fw-bold mb-3">Digitaliza tu negocio hoy.</h2>
-                <p class="text-muted mb-4">Hablemos de tu proyecto. Te asesoramos sin tecnicismos complicados.</p>
-                <a href="mailto:hola@amatdev.com" class="btn btn-primary btn-lg rounded-pill px-5 fw-bold">
-                    Contactar <i class="fa-solid fa-paper-plane ms-2"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <footer class="text-center">
+    <footer class="text-center py-4 border-top border-secondary">
         <div class="container">
-            <div class="row justify-content-center mb-4">
-                <div class="col-md-6">
-                    <h5 class="text-white fw-bold mb-2"><i class="fa-solid fa-layer-group text-primary me-2"></i>AMAT DEV</h5>
-                    <p class="text-muted small">
-                        Ingeniería de Software hecha en Panamá. 🇵🇦
-                    </p>
-                </div>
-            </div>
-            <div class="border-top border-secondary pt-4 mt-2">
-                <p class="small text-muted mb-0">© 2024 Amat Dev. Todos los derechos reservados.</p>
-            </div>
+            <p class="text-white mb-0 fw-bold">AMAT DEV</p>
+            <small class="text-muted">© 2024 Todos los derechos reservados.</small>
         </div>
     </footer>
 
