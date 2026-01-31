@@ -4,8 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Amat Dev | Consultoría de Software & SaaS 🇵🇦</title>
+    <meta name="description" content="Amat Dev es una consultora de software en Panamá especializada en desarrollo web, SaaS médicos y automatización para PYMES. Tecnología Python y Cloud.">
+    <meta name="keywords" content="Desarrollo Software Panamá, Programadores Panamá, SaaS Médico, Consultoría Tecnológica, Python Django Panamá, Automatización de Negocios">
+    <meta name="author" content="Amat Dev">
     
+    <meta name="google-site-verification" content="iGJ8JI1slYokSmrTCIQ0PMWJ5pwmRsAFHjRs3q3tEEg" />
+
+    <meta property="og:title" content="Amat Dev | Innovación en Software 🇵🇦">
+    <meta property="og:description" content="Transformamos tu negocio con software a la medida. Expertos en SaaS y Cloud.">
+    <meta property="og:url" content="https://amatdev.com">
+    <meta property="og:type" content="website">
+
+    <title>Amat Dev | Consultoría de Software & SaaS 🇵🇦</title>
     <link rel="icon" type="image/svg+xml" href="https://upload.wikimedia.org/wikipedia/commons/a/ab/Flag_of_Panama.svg">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -57,7 +67,6 @@
             overflow: hidden;
         }
         
-        /* Patrón de fondo */
         .hero-bg-pattern {
             background-image: radial-gradient(rgba(255,255,255,0.1) 1px, transparent 1px);
             background-size: 40px 40px; 
@@ -162,6 +171,20 @@
             border: 1px solid rgba(255,255,255,0.05);
             border-left: 4px solid var(--accent); 
             padding: 2rem; border-radius: 12px; 
+        }
+
+        /* --- 📱 ESTILOS PARA CELULARES (RESPONSIVE) --- */
+        @media (max-width: 768px) {
+            .display-title { font-size: 2.5rem; }
+            .hero-section { padding: 120px 0 60px; }
+            .hero-btns {
+                flex-direction: column; 
+                width: 100%;
+                padding: 0 20px;
+            }
+            .hero-btns .btn { width: 100%; margin-bottom: 10px; }
+            .team-card, .feature-card { padding: 1.5rem; }
+            .tech-icon { font-size: 2rem; margin: 10px; }
         }
     </style>
 </head>
