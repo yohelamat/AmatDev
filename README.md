@@ -4,7 +4,7 @@
   <h1>AMAT DEV | Official Website</h1>
   
   <p>
-    <strong>Consultoría de Software, SaaS & Arquitectura Cloud 🇵🇦</strong>
+    <strong>Consultoría de Software & SaaS 🇵🇦</strong>
   </p>
 
   <p>
