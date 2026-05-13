@@ -25,7 +25,7 @@
 ## 🚀 Sobre el Proyecto
 
 Repositorio oficial del sitio web corporativo de **Amat Dev**. 
-Esta plataforma es el hub central de nuestra consultoría tecnológica, especializada en **Desarrollo SaaS, Automatización y Soluciones Cloud** para el mercado panameño e internacional.
+Esta plataforma es el hub central de nuestra consultoría tecnológica, especializada en **Desarrollo SaaS, Automatización.** para el mercado panameño e internacional.
 
 El sitio ha sido desplegado bajo una infraestructura Serverless segura y optimizado para **Mobile-First**.
 
